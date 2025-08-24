@@ -85,6 +85,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <Prarticles></Prarticles>
         {children}
         <noscript>
           <div>
