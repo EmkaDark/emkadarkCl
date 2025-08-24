@@ -1,0 +1,121 @@
+@use "../../../styles/vars.module.scss" as *;
+@use "../../../styles/mixins" as *;
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  &_inputs {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  &_label {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    border-radius: 15px;
+
+    span {
+      @include fontOrbi();
+      font-size: 24px;
+      line-height: 100%;
+      font-weight: 600;
+      color: $dark_green;
+    }
+    input {
+      width: 250px;
+      height: 30px;
+      border-radius: 8px;
+      font-size: 18px;
+      line-height: 100%;
+      font-weight: 400;
+      border: 3px solid $white;
+      color: $dark_green;
+      padding-left: 10px;
+      transition: border-color 0.3s linear;
+      &:active,
+      &:hover,
+      &:focus-visible {
+        outline: none;
+        border-color: $dark_green;
+      }
+    }
+  }
+  &_button {
+    padding: 20px 45px;
+    border: 3px solid $dark_green;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 100%;
+    transition: color 0.3s linear;
+    cursor: pointer;
+    &:hover {
+      color: $dark_green;
+    }
+  }
+  &_loader {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top: 3px solid $dark_green;
+    border-left: 3px solid $dark_green;
+    border-bottom: 3px solid $dark_green;
+    animation: spin 0.3s linear infinite;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1450px) {
+  .form {
+    flex-direction: column;
+    align-items: flex-start;
+    &_inputs {
+      width: 70%;
+    }
+  }
+}
+
+@media (max-width: 1020px) {
+  .form {
+    align-items: center;
+    &_inputs {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    &_label {
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: 70%;
+      width: 100%;
+      gap: 15px;
+      input {
+        width: 100%;
+        min-width: 150px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .form {
+    &_label {
+      input {
+        text-align: start;
+      }
+    }
+  }
+}

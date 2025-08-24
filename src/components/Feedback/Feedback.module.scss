@@ -1,0 +1,17 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/vars.module.scss" as *;
+.feedback {
+  margin-bottom: 40px;
+  &_container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  &_header {
+    @include fontOrbi();
+    font-size: 56px;
+    line-height: 100%;
+    font-weight: 800;
+    text-shadow: 5px 5px 15px $white;
+    margin-bottom: 30px;
+  }
+}

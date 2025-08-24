@@ -1,0 +1,112 @@
+@use "../styles/vars.module.scss" as vars;
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("/fonts/OpenSans_Condensed-Regular.woff2") format("woff2"),
+    url("/fonts/OpenSans_Condensed-Regular.woff") format("woff");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("/fonts/OpenSans_Condensed-SemiBold.woff2") format("woff2"),
+    url("/fonts/OpenSans_Condensed-SemiBold.woff") format("woff");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("/fonts/OpenSans_Condensed-ExtraBold.woff2") format("woff2"),
+    url("/fonts/OpenSans_Condensed-ExtraBold.woff") format("woff");
+  font-weight: 800;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: vars.$backgorund;
+  position: relative;
+  font-family: "OpenSans";
+}
+
+#tsparticles {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: vars.$white;
+}
+p,
+b,
+strong,
+button,
+a,
+i,
+em {
+  color: vars.$white;
+}
+
+button {
+  background: transparent;
+  border: none;
+}
+
+.flex {
+  display: flex;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.container {
+  max-width: 1920px;
+  width: 100%;
+  padding: 0 150px;
+  margin: 0 auto;
+  border-radius: 15px;
+  border: 2px solid vars.$white;
+  backdrop-filter: blur(3px);
+}
+
+@media (max-width: 1400px) {
+  .container {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+@media (max-width: 1020px) {
+  .container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 750px) {
+  .container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+@media (max-width: 450px) {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}

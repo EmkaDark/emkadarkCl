@@ -1,0 +1,49 @@
+@use "../../../styles/mixins" as *;
+@use "../../../styles/vars.module.scss" as *;
+.myinfo {
+  margin-bottom: 30px;
+  &_container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  &_about {
+    margin-bottom: 40px;
+    &_header {
+      @include fontOrbi();
+      font-size: 34px;
+      line-height: 100%;
+      margin-bottom: 20px;
+    }
+    &_desc {
+      font-size: 20px;
+      line-height: 100%;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+  }
+
+  &_list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  &_item {
+    @include border();
+    border-radius: 15px;
+    padding: 20px;
+  }
+  &_icon {
+    margin-bottom: 15px;
+  }
+  &_header {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 700;
+    color: $dark_green;
+  }
+  &_desc {
+    font-size: 18px;
+    line-height: 100%;
+    font-weight: 600;
+  }
+}

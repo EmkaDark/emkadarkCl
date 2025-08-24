@@ -1,0 +1,65 @@
+@use "../../styles/vars.module.scss" as *;
+.hero {
+  position: relative;
+  height: 600px;
+  margin-bottom: 50px;
+  &_container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    overflow: hidden;
+    height: 100%;
+  }
+  &_content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 100%;
+  }
+  &_div {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &_desk {
+    font-size: 24px;
+    line-height: 100%;
+    flex: 1;
+    text-align: right;
+  }
+  &_button {
+    padding: 20px 25px;
+    border: 3px solid $dark_green;
+    border-radius: 10px;
+    font-size: 24px;
+    line-height: 100%;
+    font-weight: 600;
+    transition: color 0.3s linear;
+    margin-top: 50px;
+    cursor: pointer;
+    &:focus-visible,
+    &:focus,
+    &:hover {
+      outline: none;
+      color: $dark_green;
+    }
+  }
+}
+
+@media (max-width: 1020px) {
+  .hero {
+    height: fit-content;
+  }
+}
+@media (max-width: 750px) {
+  .hero {
+    &_content {
+      align-items: center;
+    }
+    &_desk {
+      font-size: 18px;
+      text-align: center;
+    }
+    &_button {
+      font-size: 18px;
+    }
+  }
+}

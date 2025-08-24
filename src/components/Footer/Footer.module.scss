@@ -1,0 +1,49 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/vars.module.scss" as *;
+.footer {
+  margin-bottom: 30px;
+  &_container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  &_header {
+    @include fontOrbi();
+    font-size: 24px;
+    line-height: 100%;
+    font-weight: 600;
+    color: $dark_green;
+    margin-bottom: 15px;
+  }
+  &_feedback {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &_icons {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+  }
+  &_link {
+    cursor: pointer;
+  }
+  &_icon {
+    width: 50px;
+    height: 50px;
+    transition: fill 0.3s linear;
+    &:hover {
+      fill: $dark_green;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .footer {
+    &_container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

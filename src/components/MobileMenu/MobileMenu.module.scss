@@ -1,0 +1,98 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/vars.module.scss" as styles;
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  visibility: hidden;
+  transition: visibility 0.3s ease;
+
+  &.open {
+    visibility: visible;
+
+    .overlay {
+      opacity: 1;
+    }
+
+    .content {
+      transform: translateX(0);
+    }
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80%;
+  max-width: 400px;
+  height: 100%;
+  background: transparent;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  padding: 20px;
+  overflow-y: auto;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  @include border();
+}
+
+.close {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin-bottom: 50px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: styles.$dark_green;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover {
+    &::before,
+    &::after {
+      background: darken(styles.$dark_green, 10%);
+    }
+  }
+  &:focus {
+    outline: none;
+    background: darken(styles.$dark_green, 50%);
+  }
+}

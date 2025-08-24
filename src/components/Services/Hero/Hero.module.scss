@@ -1,0 +1,49 @@
+@use "../../../styles/mixins" as *;
+
+.hero {
+  margin-bottom: 30px;
+  &_container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  &_header {
+    @include fontOrbi();
+    font-size: 58px;
+    line-height: 100%;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 1400px) {
+  .hero {
+    &_header {
+      font-size: 58px;
+      margin-bottom: 35px;
+    }
+  }
+}
+
+@media (max-width: 1020px) {
+  .hero {
+    &_header {
+      font-size: 50px;
+      margin-bottom: 35px;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .hero {
+    &_header {
+      font-size: 40px;
+      margin-bottom: 35px;
+    }
+  }
+}
+@media (max-width: 450px) {
+  .hero {
+    &_header {
+      font-size: 30px;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@use "../../styles/vars.module.scss" as *;
+.header {
+  position: relative;
+  max-height: 100px;
+  height: 100%;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  .logo_link {
+    position: relative;
+    margin-right: 20px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: -10px;
+      bottom: 0;
+      height: 100%;
+      width: 5px;
+      background: $dark_green;
+      transform: scaleY(0);
+      transform-origin: bottom center;
+      transition: transform 0.3s linear;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      right: -10px;
+      top: 0;
+      height: 100%;
+      width: 5px;
+      background: $dark_green;
+      transform: scaleY(0);
+      transform-origin: top center;
+      transition: transform 0.3s linear;
+    }
+    &:focus,
+    &:active {
+      outline: none;
+    }
+    &:hover::before {
+      transform: scaleY(1);
+      outline: none;
+    }
+    &:focus::before {
+      transform: scaleY(1);
+      outline: none;
+    }
+
+    &:hover::after {
+      transform: scaleY(1);
+      outline: none;
+    }
+    &:focus::after {
+      transform: scaleY(1);
+      outline: none;
+    }
+  }
+}

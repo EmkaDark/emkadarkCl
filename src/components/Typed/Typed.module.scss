@@ -1,0 +1,42 @@
+@use "../../styles/vars.module.scss" as *;
+.header {
+  font-size: 64px;
+  line-height: 100%;
+  font-weight: 800;
+  text-align: right;
+  margin-bottom: 50px;
+  text-shadow: 5px 5px 15px $white;
+  &_span {
+    display: block;
+
+    text-shadow: none;
+    span {
+      color: $dark_green;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .header {
+    font-size: 58px;
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 1020px) {
+  .header {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 750px) {
+  .header {
+    text-align: center;
+    font-size: 40px;
+  }
+}
+@media (max-width: 450px) {
+  .header {
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,17 @@
+@use "./vars.module.scss" as vars;
+@font-face {
+  font-family: "Orbitron";
+  src: url("/fonts/Hacked.woff2") format("woff2"),
+    url("/fonts/Hacked.woff") format("woff");
+  font-weight: 600;
+  font-display: swap; // Добавляем для плавной загрузки
+}
+
+@mixin fontOrbi {
+  font-family: "Orbitron";
+}
+
+@mixin border {
+  backdrop-filter: blur(3px);
+  border: 3px solid vars.$white;
+}

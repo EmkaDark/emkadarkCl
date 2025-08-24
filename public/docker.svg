@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<svg width="225" height="225" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" version="1.0">
+ <g class="layer">
+  <title>Layer 1</title>
+  <g fill="#000000" id="svg_1" transform="matrix(0.1 0 0 -0.1 0 0)">
+   <path d="m1080,-590l0,-80l90,0l90,0l0,80l0,80l-90,0l-90,0l0,-80z" fill="#007fff" id="svg_2" transform="matrix(1 0 0 1 0 0)"/>
+   <path d="m650,-789l0,-80l90,0l90,0l0,80l0,80l-90,0l-90,0l0,-80z" fill="#007fff" id="svg_3" transform="matrix(1 0 0 1 0 0) matrix(1 0 0 1 0 0)"/>
+   <path d="m870,-790l0,-80l90,0l90,0l0,80l0,80l-90,0l-90,0l0,-80z" fill="#007fff" id="svg_4" transform="matrix(1 0 0 1 0 0)"/>
+   <path d="m1080,-790l0,-80l90,0l90,0l0,80l0,80l-90,0l-90,0l0,-80z" fill="#007fff" id="svg_5" transform="matrix(1 0 0 1 0 0)"/>
+   <path d="m1646,-812c-32,-67 -41,-131 -26,-188c20,-77 18,-83 -20,-97c-26,-9 -199,-12 -667,-12l-633,-1l0,-83c0,-150 50,-282 144,-385c102,-109 244,-162 441,-162c293,0 535,91 714,270c67,67 152,190 177,256l16,41l64,6c84,6 147,44 188,111l30,48l-24,19c-32,24 -114,42 -172,38l-45,-4l-16,45c-16,46 -109,150 -133,150c-7,0 -24,-24 -38,-52z" fill="#007fff" id="svg_6" transform="matrix(1 0 0 1 0 0)"/>
+   <path d="m430,-990l0,-80l90,0l90,0l0,80l0,80l-90,0l-90,0l0,-80z" fill="#007fff" id="svg_7"/>
+   <path d="m650,-990l0,-80l90,0l90,0l0,80l0,80l-90,0l-90,0l0,-80z" fill="#007fff" id="svg_8" transform="matrix(1 0 0 1 0 0)"/>
+   <path d="m869,-991l0,-80l90,0l90,0l0,80l0,80l-90,0l-90,0l0,-80z" fill="#007fff" id="svg_9"/>
+   <path d="m1080,-990l0,-80l90,0l90,0l0,80l0,80l-90,0l-90,0l0,-80z" fill="#007fff" id="svg_10" transform="matrix(1 0 0 1 0 0)"/>
+   <path d="m1299,-990l0,-80l90,0l90,0l0,80l0,80l-90,0l-90,0l0,-80z" fill="#007fff" id="svg_11" transform="matrix(1 0 0 1 0 0)"/>
+  </g>
+ </g>
+</svg>

@@ -1,0 +1,49 @@
+@use "../../styles/vars.module.scss" as vars;
+
+.burger_par {
+  align-items: center;
+  height: 100%;
+  display: none;
+}
+
+.burger {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  &.active {
+    .line:nth-child(1) {
+      transform: translateY(11px) rotate(45deg);
+    }
+    .line:nth-child(2) {
+      opacity: 0;
+      transform: scale(0);
+    }
+    .line:nth-child(3) {
+      transform: translateY(-11px) rotate(-45deg);
+    }
+  }
+  .line {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: vars.$dark_green;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .burger_par {
+    display: flex;
+  }
+}

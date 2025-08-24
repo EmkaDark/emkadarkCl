@@ -1,0 +1,55 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/vars.module.scss" as *;
+.submit {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  visibility: hidden;
+  &.open {
+    visibility: visible;
+  }
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.content {
+  @include border();
+  border-radius: 15px;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+}
+.text {
+  font-size: 24px;
+  line-height: 100%;
+  font-weight: 600;
+  text-align: center;
+}
+.icon {
+  fill: $dark_green;
+}
+
+@media (max-width: 750px) {
+  .content {
+    width: 80%;
+    height: 50%;
+  }
+}
