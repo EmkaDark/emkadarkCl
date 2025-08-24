@@ -1,1 +1,1 @@
-export const URL = "http:/emkadark.ru";
+export const URL = "http://emkadark.ru";
