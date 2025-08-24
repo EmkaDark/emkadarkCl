@@ -8,8 +8,8 @@ export function PersonStructuredData() {
     jobTitle: "Fullstack разработчик",
     description:
       "Fullstack разработчик с 2020 года. Специализация: Next.js, Nest.js, React, TypeScript. Создаю современные сайты и веб-приложения.",
-    url: "https://emka-portfolio.ru",
-    image: "https://emka-portfolio.ru/og-image.jpg",
+    url: "https://emkadark.ru",
+    image: "https://emkadark.ru/og-image.jpg",
     knowsAbout: [
       "Next.js",
       "Nest.js",
