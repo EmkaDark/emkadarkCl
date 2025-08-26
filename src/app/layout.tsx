@@ -58,7 +58,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const yandexId = 12345678; // Замени на свой ID
+  const yandexId = 103869830;
 
   return (
     <html lang="ru">
